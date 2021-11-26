@@ -8,6 +8,114 @@ import loginImage from '../images/loginImage.jpg';
 
 const Test = () => {
 
+    const validation = (e) => {
+        e.preventDefault();
+        let username = document.getElementById('username').value;
+        let first = document.getElementById('first').value;
+        let last = document.getElementById('last').value;
+        let mob = document.getElementById('mob').value;
+        let email = document.getElementById('email').value;
+        let pass = document.getElementById('pass').value;
+        let confirmpass = document.getElementById('confirmpass').value;
+
+        //Name Validation
+        //Login
+        if (username == "") {
+            alert("Enter your username!");
+            return false;
+        }
+        if ((username.length <= 2) || (username.length > 20)) {
+            alert("Your name length should be between 8 to 20!");
+            return false;
+
+        }
+        if (!isNaN(username)) {
+            alert("Only alphabets are allowed!");
+            return false;
+        }
+
+        //Register
+        //First Name
+        if (first == "") {
+            alert("Enter your first name!");
+            return false;
+        }
+        if ((first.length <= 2) || (first.length > 20)) {
+            alert("Your name length should be between 2 to 20!");
+            return false;
+
+        }
+        if (!isNaN(first)) {
+            alert("Only alphabets are allowed!");
+            return false;
+        }
+
+        //Last Name
+        if (last == "") {
+            alert(" Enter your last name!");
+            return false;
+        }
+        // if((last.length<=2) || (last.length>20)){
+        //     alert( "Your name length should be between 2 to 20!" );
+        //     return false;
+
+        // }
+        if (!isNaN(last)) {
+            alert("Only alphabets are allowed!");
+            return false;
+        }
+
+        //Mobile Number Validation
+        if (mob == "") {
+            alert("Enter your mobile number!");
+            return false;
+        }
+        if (isNaN(mob)) {
+            alert("Only digits are allowed!");
+            return false;
+
+        }
+        if (mob.length != 10) {
+            alert("Length should be at least 10!");
+            return false;
+        }
+
+        //Email Validation
+        if (email == "") {
+            alert("Enter your email!");
+            return false;
+        }
+        if (email.indexOf('@') <= 0) {
+            alert("@ Invalid position!");
+            return false;
+        }
+        if ((email.charAt(email.length - 4) != '.') && (email.charAt(email.length - 3) != '.')) {
+            alert(". Invalid position!");
+            return false;
+        }
+
+        //Password Validation
+        if (pass == "") {
+            alert("Enter your password!");
+            return false;
+        }
+        if ((pass.length <= 5) || (pass.length > 15)) {
+            alert("Your password length should be between 5 to 15!");
+            return false;
+
+        }
+        if (confirmpass == "") {
+            alert("Enter your confirm password!");
+            return false;
+        }
+        if (pass != confirmpass) {
+            alert("Password not match!");
+            return false;
+
+        }
+
+    }
+
     return (
 
         <div id="body">
@@ -55,16 +163,16 @@ const Test = () => {
                             <h6 style={{ float: 'left', marginTop: 20 }}>Thank you for get back to Lottery Display lets access out the best recommendation for you.
                             </h6>
 
-                            <form action="#">
+                            <form action="#" onSubmit={validation}>
 
                                 <div className="input-boxes" style={{ marginTop: 140 }}>
                                     <div className="input-box">
                                         <i className="fas fa-user"></i>
-                                        <input type="text" placeholder="Enter your username" required />
+                                        <input type="text" id="username" name="username" placeholder="Enter your username" />
                                     </div>
                                     <div className="input-box">
                                         <i className="fas fa-lock"></i>
-                                        <input type="password" placeholder="Enter your password" required />
+                                        <input type="password" id="pass" name="pass" placeholder="Enter your password" />
                                     </div>
 
                                     <div className="text" style={{ fontSize: 16, marginTop: 12 }}>
@@ -86,7 +194,7 @@ const Test = () => {
                         <div className="signup-form">
                             <div className="title" style={{ float: 'left', lineHeight: 2 }}>Register</div>
 
-                            <form action="#" style={{ marginTop: 80 }}>
+                            <form action="#" style={{ marginTop: 80 }} onSubmit={validation}>
                                 <div style={{ float: 'left', lineHeight: 2 }}>
                                     <h4 style={{ float: 'left' }}>Manage all your lottery efficiently</h4>
                                     <br />
@@ -101,13 +209,13 @@ const Test = () => {
                                         <div className="column">
                                             <div className="input-box">
                                                 <i className="fas fa-user"></i>
-                                                <input type="text" placeholder="Enter first name" required />
+                                                <input type="text" id="first" name="first" placeholder="Enter first name" />
                                             </div>
                                         </div>
                                         <div className="column">
                                             <div className="input-box">
                                                 <i className="fas fa-user"></i>
-                                                <input type="text" placeholder="Enter last name" required />
+                                                <input type="text" id="last" name="last" placeholder="Enter last name" />
                                             </div>
                                         </div>
 
@@ -119,13 +227,13 @@ const Test = () => {
                                             <div className="input-box">
 
                                                 <i className="fas fa-phone"></i>
-                                                <input type="text" placeholder="Enter phone number" required />
+                                                <input type="text" id="mob" name="mob" placeholder="Enter phone number" />
                                             </div>
                                         </div>
                                         <div className="column">
                                             <div className="input-box">
                                                 <i className="fas fa-envelope"></i>
-                                                <input type="email" placeholder="Enter email" required />
+                                                <input type="text" id="email" name="email" placeholder="Enter email" />
                                             </div>
                                         </div>
                                     </div>
@@ -135,13 +243,13 @@ const Test = () => {
                                         <div className="column">
                                             <div className="input-box">
                                                 <i className="fas fa-lock"></i>
-                                                <input type="password" placeholder="Enter password" required />
+                                                <input type="password" id="pass" name="pass" placeholder="Enter password" />
                                             </div>
                                         </div>
                                         <div className="column">
                                             <div className="input-box">
                                                 <i className="fas fa-lock"></i>
-                                                <input type="password" placeholder="Enter confirm password" required />
+                                                <input type="password" id="confirmpass" name="confirmpass" placeholder="Enter confirm password" />
                                             </div>
                                         </div>
                                     </div>
@@ -159,8 +267,8 @@ const Test = () => {
 
 
                                     <br /> <br />
-                                    <div className="button input-box" style={{ width: 200 }}>
-                                        <input type="submit" value="Create Account" />
+                                    <div className="button input-box" style={{ width: 200 }} >
+                                        <input type="submit" name="submit" value="Create Account" />
                                     </div>
                                     <div className="text sign-up-text" style={{ fontSize: 16 }}>Already have an account?<label
                                         for="flip" style={{ color: 'rgb(90, 195, 230)', textDecoration: 'none' }}>Login</label>
