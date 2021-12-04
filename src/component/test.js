@@ -123,49 +123,46 @@ const Test = () => {
                 <input type="checkbox" id="flip" />
                 <div className="cover">
                     <div className="front">
-                        <img src={loginImage} alt="error" className="fImg"/>
+                        <img src={loginImage} alt="error" className="fImg" />
 
                     </div>
                     <div className="back">
 
-                        <img src={logoLight} alt="error" id="bImg"/>
+                        <img src={logoLight} alt="error" id="lImg" />
                         <h3 className="bH3">Lottery Display</h3>
                         <h2 className="bH2">A few clicks away from <br />creating your
                             Lottery
                             Display</h2>
-                        <img className="backImg" src={register}
-                            style={{ width: 600, height: 451, marginTop: 30, marginLeft: -300 }} alt="error" />
-
-
+                        <img id="backImg" src={register}
+                            alt="error" />
 
                     </div>
                 </div>
-                <div className="forms" style={{ float: 'left' }}>
+                <div className="forms">
                     <table>
-                        <tr style={{ float: 'left' }}>
-                            <td><img src={logoDark} style={{ width: 60, height: 70 }} alt="error" /></td>
+                        <tr>
+                            <td><img src={logoDark} className="tImg" alt="error" /></td>
                             <td>
-                                <h3 style={{ color: 'black' }}>Lottery Display</h3>
+                                <h3 className="tH3">Lottery Display</h3>
                             </td>
                         </tr>
                     </table>
 
                     <div className="form-content">
                         <div className="login-form">
-                            <div style={{ lineHeight: 2, marginTop: -68 }}>
-                                <div className="title" style={{ float: 'left' }}>Login</div>
+                            <div style={{ lineHeight: 2, marginTop: -70 }} className="lfcontent">
+                                <div className="title">Login</div>
                                 <br />
-
-                                <h4 style={{ float: 'left', marginTop: 50, marginLeft: -64 }}>Login to your account</h4>
+                                <h4 className="lfH4">Login to your account</h4>
 
                             </div>
 
-                            <h6 style={{ float: 'left', marginTop: 20 }}>Thank you for get back to Lottery Display lets access out the best recommendation for you.
+                            <h6 className="lfH6">Thank you for get back to Lottery Display lets access out the best recommendation for you.
                             </h6>
 
                             <form action="#" onSubmit={validation}>
 
-                                <div className="input-boxes" style={{ marginTop: 140 }}>
+                                <div className="input-boxes">
                                     <div className="input-box">
                                         <i className="fas fa-user"></i>
                                         <input type="text" id="username" name="username" placeholder="Enter your username" />
@@ -175,16 +172,16 @@ const Test = () => {
                                         <input type="password" id="pass" name="pass" placeholder="Enter your password" />
                                     </div>
 
-                                    <div className="text" style={{ fontSize: 16, marginTop: 12 }}>
-                                        &nbsp;<input type="checkbox" id="test" name="test" value="test" style={{ float: 'left', marginTop: 3 }} />
-                                        <label for="test" style={{ color: 'grey', textDecoration: 'none', float: 'left' }}> &nbsp;&nbsp;Remember me</label>
-                                        <a href="abc.js" style={{ float: 'right', color: 'rgb(90, 195, 230)', textDecoration: 'none' }}>Reset password?</a>
+                                    <div className="text">
+                                        &nbsp;<input type="checkbox" id="test" name="test" value="test" />
+                                        <label for="test" className="formcontent"> &nbsp;&nbsp;Remember me</label>
+                                        <a href="abc.js" className="formcontent1">Reset password?</a>
                                     </div>
                                     <br />
                                     <div className="button input-box">
                                         <input type="submit" value="Sign In" />
                                     </div>
-                                    <div className="text sign-up-text" style={{ fontSize: 16 }}>Don't have an account yet? <label
+                                    <div className="text sign-up-text">Don't have an account yet? <label className="formcontent2"
                                         for="flip" style={{ color: 'rgb(90, 195, 230)', textDecoration: 'none' }}>Join Lottery
                                         Display</label>
                                     </div>

@@ -5,7 +5,7 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: "Poppins" , sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 #body {
@@ -294,7 +294,7 @@
   background-color: blueviolet;
 }
 
-.back #bImg {
+.back #lImg {
   width: 60px;
   height: 70px;
   margin-left: -180px;
@@ -312,6 +312,81 @@
   text-align: center;
   margin-top: 32px;
   color: white;
+}
+
+.back #backImg {
+  width: 600px;
+  height: 451px;
+  margin-top: 30px;
+  margin-left: -300px;
+}
+
+table tr {
+  float: left;
+}
+
+table .tImg {
+  width: 60px;
+  height: 70px;
+}
+
+table .tH3 {
+  color: black;
+}
+
+.form-content .login-form .lfcontent {
+  line-height: 2px;
+  margin-top: -70px;
+}
+
+.form-content .login-form .lfcontent .title {
+  float: left;
+}
+
+.form-content .login-form .lfcontent .lfH4 {
+  float: left;
+  margin-top: 50px;
+  margin-left: -64px;
+}
+
+.form-content .login-form .lfH6 {
+  float: left;
+  margin-top: 20px;
+}
+
+.form-content .login-form form .input-boxes {
+  margin-top: 140px;
+}
+
+.form-content .login-form form .input-boxes .text {
+  font-size: 16px;
+  margin-top: 12px;
+}
+
+.form-content .login-form form .input-boxes .text #test {
+  float: left;
+  margin-top: 5px;
+}
+
+.form-content .login-form form .input-boxes .text .formcontent {
+  color: grey;
+  text-decoration: none;
+  float: left;
+}
+
+.form-content .login-form form .input-boxes .text .formcontent1 {
+  color: #5ac3e6;
+  text-decoration: none;
+  float: right;
+}
+
+.form-content .login-form form .input-boxes .text sign-up-text {
+  font-size: 16px;
+}
+
+.form-content .login-form form .input-boxes .text sign-up-text .formcontent2 {
+  color: #5ac3e6;
+  text-decoration: none;
 }
 
 @media (max-width: 730px) {
