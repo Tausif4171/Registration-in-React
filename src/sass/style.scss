@@ -214,6 +214,39 @@
   display: table;
   clear: both;
 }
+// ################################################################################
+.front .fImg{
+    margin-left: -300px;
+}
+//nesting
+.back{
+  background-color: blueviolet;
+  #bImg{
+    width: 60px; 
+    height: 70px;
+    margin-left: -180px;
+    margin-top: 12px;
+  }
+  //variable
+  $myAlign: center;
+  $myTop: 32px;
+  $myRight: 80px;
+  $myColor: white;
+  //@mixin and @include
+  @mixin headingStyle {
+    text-align: $myAlign; 
+    margin-top: $myTop;
+    color: $myColor;
+  }
+  .bH3{
+    @include headingStyle;
+    margin-right: $myRight;
+  }
+  .bH2{
+    @include headingStyle;
+  }
+}
+
 
 @media (max-width: 730px) {
   .container .cover{

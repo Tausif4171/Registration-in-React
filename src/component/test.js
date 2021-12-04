@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './style.css';
+import '../sass/style.css';
 import register from '../images/register.jpg';
 import logoLight from '../images/logoLight.png';
 import logoDark from '../images/logoDark.jpg';
@@ -123,14 +123,14 @@ const Test = () => {
                 <input type="checkbox" id="flip" />
                 <div className="cover">
                     <div className="front">
-                        <img src={loginImage} style={{ marginLeft: -300 }} alt="error" />
+                        <img src={loginImage} alt="error" className="fImg"/>
 
                     </div>
-                    <div className="back" style={{ backgroundColor: 'blueviolet' }}>
+                    <div className="back">
 
-                        <img style={{ width: 60, height: 70, marginLeft: -180, marginTop: 12 }} src={logoLight} alt="error" />
-                        <h3 style={{ textAlign: 'center', marginTop: 32, marginRight: 80, color: 'white' }}>Lottery Display</h3>
-                        <h2 style={{ textAlign: 'center', marginTop: 32, color: 'white' }}>A few clicks away from <br />creating your
+                        <img src={logoLight} alt="error" id="bImg"/>
+                        <h3 className="bH3">Lottery Display</h3>
+                        <h2 className="bH2">A few clicks away from <br />creating your
                             Lottery
                             Display</h2>
                         <img className="backImg" src={register}
