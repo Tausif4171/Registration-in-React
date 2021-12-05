@@ -23,6 +23,7 @@
 	max-width: 1200px;
 	width: 100%;
 	background: #fff;
+	height: 692px;
 	padding: 40px 30px;
 	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 	perspective: 2700px;
@@ -122,6 +123,12 @@
 .form-content .login-form,
 .form-content .signup-form {
 	width: calc(100% / 2 - 25px);
+}
+.form-content .login-form{
+	margin-top: 20px;
+}
+.form-content .signup-form {
+	margin-top: -70px;
 }
 
 .forms .form-content .title {

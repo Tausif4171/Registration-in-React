@@ -192,7 +192,7 @@ const Test = () => {
                                         <label for="test" className="formcontent"> &nbsp;&nbsp;Remember me</label>
                                         <a href="abc.js" className="formcontent1">Reset password?</a>
                                     </div>
-                                    <br />
+
                                     <div className="button input-box">
                                         <input type="submit" value="Sign In" />
                                     </div>
@@ -268,21 +268,21 @@ const Test = () => {
 
                                     <br />
                                     <div style={{ float: 'left' }}>
-                                        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" style={{ marginLeft: -12 }} />
-                                        <label for="vehicle1" style={{ textDecoration: 'none' }}> &nbsp;Yes, I want to receive Lottery Display
+                                        <input type="checkbox" style={{ marginLeft: -12 }} />
+                                        <label style={{ textDecoration: 'none' }}> &nbsp;Yes, I want to receive Lottery Display
                                             emails</label><br />
-                                        <input type="checkbox" id="vehicle2" name="vehicle2" value="Car" style={{ marginLeft: 10 }} />
-                                        <label for="vehicle2" style={{ textDecoration: 'none' }}> &nbsp;I agree to all the Term, <span
+                                        <input type="checkbox" style={{ marginLeft: 11 }} />
+                                        <label style={{ textDecoration: 'none' }}> &nbsp;I agree to all the Term, <span
                                             style={{ color: 'rgb(90, 195, 230)' }}>Privacy Policy</span> and <span
                                                 style={{ color: 'rgb(90, 195, 230)' }}>Fees</span></label><br />
                                     </div>
 
 
-                                    <br /> <br />
-                                    <div className="button input-box" style={{ width: 200 }} >
+                                    <br />
+                                    <div className="button input-box" style={{ width: 200, marginLeft: 8 }} >
                                         <input type="submit" name="submit" value="Create Account" />
                                     </div>
-                                    <div className="text sign-up-text" style={{ fontSize: 16 }}>Already have an account?<label
+                                    <div className="text sign-up-text" style={{ fontSize: 16, marginTop: 0, marginLeft: 8}}>Already have an account?<label
                                         for="flip" style={{ color: 'rgb(90, 195, 230)', textDecoration: 'none' }}>Login</label>
                                     </div>
                                 </div>
