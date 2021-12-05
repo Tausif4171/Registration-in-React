@@ -8,23 +8,18 @@ import loginImage from '../images/loginImage.jpg';
 
 const Test = () => {
 
-    const validation = (e) => {
+    const loginValidation = (e) => {
         e.preventDefault();
         let username = document.getElementById('username').value;
-        let first = document.getElementById('first').value;
-        let last = document.getElementById('last').value;
-        let mob = document.getElementById('mob').value;
-        let email = document.getElementById('email').value;
         let pass = document.getElementById('pass').value;
-        let confirmpass = document.getElementById('confirmpass').value;
 
-        //Name Validation
         //Login
+        //Username Validation
         if (username == "") {
             alert("Enter your username!");
             return false;
         }
-        if ((username.length <= 2) || (username.length > 20)) {
+        if ((username.length <= 8) || (username.length > 20)) {
             alert("Your name length should be between 8 to 20!");
             return false;
 
@@ -33,6 +28,26 @@ const Test = () => {
             alert("Only alphabets are allowed!");
             return false;
         }
+        //Password Validation
+        if (pass == "") {
+            alert("Enter your password!");
+            return false;
+        }
+        if ((pass.length <= 5) || (pass.length > 15)) {
+            alert("Your password length should be between 5 to 15!");
+            return false;
+
+        }
+    }
+
+    const registerValidation = (e) => {
+        e.preventDefault();
+        let first = document.getElementById('first').value;
+        let last = document.getElementById('last').value;
+        let mob = document.getElementById('mob').value;
+        let email = document.getElementById('email').value;
+        let pass = document.getElementById('pass').value;
+        let confirmpass = document.getElementById('confirmpass').value;
 
         //Register
         //First Name
@@ -160,7 +175,7 @@ const Test = () => {
                             <h6 className="lfH6">Thank you for get back to Lottery Display lets access out the best recommendation for you.
                             </h6>
 
-                            <form action="#" onSubmit={validation}>
+                            <form action="#" onSubmit={loginValidation}>
 
                                 <div className="input-boxes">
                                     <div className="input-box">
@@ -191,7 +206,7 @@ const Test = () => {
                         <div className="signup-form">
                             <div className="title" style={{ float: 'left', lineHeight: 2 }}>Register</div>
 
-                            <form action="#" style={{ marginTop: 80 }} onSubmit={validation}>
+                            <form action="#" style={{ marginTop: 80 }} onSubmit={registerValidation}>
                                 <div style={{ float: 'left', lineHeight: 2 }}>
                                     <h4 style={{ float: 'left' }}>Manage all your lottery efficiently</h4>
                                     <br />
