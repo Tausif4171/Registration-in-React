@@ -282,7 +282,7 @@ const Test = () => {
                                     <div className="button input-box" style={{ width: 200, marginLeft: 8 }} >
                                         <input type="submit" name="submit" value="Create Account" />
                                     </div>
-                                    <div className="text sign-up-text" style={{ fontSize: 16, marginTop: 0, marginLeft: 8}}>Already have an account?<label
+                                    <div className="text sign-up-text" style={{ fontSize: 16, marginTop: 0, marginLeft: 8 }}>Already have an account?<label
                                         for="flip" style={{ color: 'rgb(90, 195, 230)', textDecoration: 'none' }}>Login</label>
                                     </div>
                                 </div>
